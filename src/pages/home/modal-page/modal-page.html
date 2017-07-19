@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Modal Page
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+                <ion-icon name="close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-row >
+        <ion-col>
+            <form #zoneEditForm="ngForm">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>ABCDE</ion-label>
+                        <ion-checkbox item-right [(ngModel)]="silent" name="silent" #enabled="ngModel"></ion-checkbox>
+                    </ion-item>
+                    <p></p>
+                </ion-list>
+                <ion-buttons end>
+                    <button ion-button (click)="dismiss()" color="primary" >Cancel</button>
+                </ion-buttons>
+            </form>
+        </ion-col>
+    </ion-row>
+</ion-content>
